@@ -66,18 +66,6 @@ int main(int argc, char* argv[])
 		countw(argv[2]); 
 		else if(!strcmp(argv[1],"-c")) 
 		countc(argv[2]); 
-//		else if(!strcmp(argv[1],"-l")) 
-//		countl(argv[2]); 
-//		else if(!strcmp(argv[1],"-a")) 
-//		{ 
-//		count_blankline(argv[2]); 
-//		count_noteline(argv[2]); 
-//		count_codeline(argv[2]); 
-//		} 
-//		else if(!strcmp(argv[1],"-s")) 
-//		{ 
-//		searchfile(); 
-//		} 
 		else printf("NullPoint\n");  
 		scanf("%s%s%s",argv[0],argv[1],argv[2]); 
 	} 
