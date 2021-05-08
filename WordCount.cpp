@@ -16,9 +16,9 @@ int countc(char *file) //返回文件的字符数
 	{ 
 	a=fgetc(f);
 	if (a != ' '&&a != '\n'&&a != '\t')
-	{ 
+	 { 
 	    sum++;
-	} 
+	 } 
 	}
 	fclose(f);
 	printf("字符数:%d ",sum); 
