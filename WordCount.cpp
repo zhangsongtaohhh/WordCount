@@ -6,7 +6,7 @@ int countc(char *file) //返回文件的字符数
 {   FILE *f;
     f = fopen(file, "r");
     char a;
-    int cchar=0;
+    int sum=0;
     if(NULL==(f=fopen(file,"r")))
     {
         printf("file is NULL");
@@ -17,18 +17,18 @@ int countc(char *file) //返回文件的字符数
 	a=fgetc(f);
 	if (a != ' '&&a != '\n'&&a != '\t')
 	{ 
-	    cchar++;
+	    sum++;
 	} 
 	}
 	fclose(f);
-	printf("字符数:%d ",cchar); 
+	printf("字符数:%d ",sum); 
 }
 
 int countw(char *file)//返回文件单词的数目 
 {   FILE *f;
     f=fopen(file,"r");
-    int cword=0;
-    int aword;
+    int c=0;
+    int flag;
     char ch;
     if(NULL==(f=fopen(file,"r")))
     {
@@ -40,16 +40,16 @@ int countw(char *file)//返回文件单词的数目
 	  ch=fgetc(f); 
 	  if((ch >= 'a'&&ch <= 'z')||(ch>='A'&&ch<='Z')||ch=='_')
 	  { 
-	   aword=1;
+	   flag=1;
 	  } 
-	  else if (aword) 
+	  else if (flag) 
 	  { 
-	    cword++; 
-	    aword=0; 
+	    c++; 
+	    flag=0; 
 	  } 
 	} 
 	fclose(f); 
-	printf("单词数:%d ",cword); 
+	printf("单词数:%d ",c); 
 }
 int main(int argc, char* argv[])             
 {
